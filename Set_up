@@ -1,6 +1,68 @@
 Set up
 Run in breaks of code
 
+## Installation Instructions
+
+This project requires GDAL and GCC to be installed on your system. Follow the steps below to set up your environment on Windows.
+
+### Prerequisites
+
+- **Windows Operating System**: These instructions are tailored for Windows users.
+- **Administrator Access**: Some installations may require administrative privileges.
+
+### Step 1: Install GDAL
+
+1. **Download the GDAL Installer**:
+   - Visit the [GIS Internals GDAL website](https://www.gisinternals.com/release.php).
+   - Download the latest GDAL binary package for Windows (look for the `gdal-*-msvc*.exe` installer).
+
+2. **Run the Installer**:
+   - Double-click the downloaded `.exe` file to start the installation.
+   - Follow the prompts to complete the installation, making sure to note the installation directory (typically `C:\Program Files\GDAL`).
+
+3. **Set Environment Variables**:
+   - Right-click on **This PC** or **My Computer**, and select **Properties**.
+   - Click on **Advanced system settings**.
+   - Click on **Environment Variables**.
+   - Under **System variables**, find and select the `Path` variable, then click **Edit**.
+   - Add the GDAL installation path (e.g., `C:\Program Files\GDAL`) to the list.
+   - Click **OK** to close all dialog boxes.
+
+4. **Verify GDAL Installation**:
+   - Open a Command Prompt (CMD).
+   - Type the following command:
+     ```bash
+     gdalinfo --version
+     ```
+   - You should see the GDAL version information if the installation was successful.
+
+### Step 2: Install GCC
+
+1. **Download MinGW-w64**:
+   - Visit the [MinGW-w64](https://mingw-w64.org/doku.php/download) website.
+   - You can download the installer from [SourceForge](https://sourceforge.net/projects/mingw-w64/).
+
+2. **Run the Installer**:
+   - Choose the architecture you need (e.g., `x86_64` for 64-bit systems).
+   - Select the version (usually the latest) and choose the default threading model (`posix`) and exception model (`seh`).
+   - Choose an installation directory (e.g., `C:\mingw-w64`).
+
+3. **Set Environment Variables for GCC**:
+   - As with GDAL, you'll need to add the path to the GCC `bin` directory to your `Path` variable.
+   - This is typically `C:\mingw-w64\bin`, but may vary based on your installation.
+
+4. **Verify GCC Installation**:
+   - Open a Command Prompt (CMD).
+   - Type the following command:
+     ```bash
+     gcc --version
+     ```
+   - You should see the GCC version information if the installation was successful.
+
+### Additional Notes
+
+- Ensure that the versions of GDAL and GCC are compatible with your project requirements.
+- If you encounter any issues, refer to the official documentation for GDAL and MinGW-w64.
 
 
 cd MOLASSES
