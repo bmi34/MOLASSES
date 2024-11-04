@@ -23,8 +23,7 @@
 ###########################################################################    
 
 #Makefile for compiling MOLASSES Modular Lava Simulator
-
-#MODULES: Alter as needed. 
+# MODULES: Alter as needed.
 export driver      = LJC2
 export initialize  = LJC2
 export DEM_loader  = LJC
@@ -35,18 +34,17 @@ export distribute  = proportional2slope4_LJC2
 export neighbor_ID = 8
 export output      = 2LJC2
 export newvent     = LJC2
-export check_vent	 = 2
+export check_vent  = 2
 export params      = 2
-# export activate  = LJC
 
 # Linking and compiling variables
 # Alter as needed for your system.
-export CC	= gcc
-export INSTALLPATH	= .
-export GDAL_INCLUDE_PATH = /usr/include/gdal
-# export GDAL_LIB_PATH =
-export BINDIR	= $(INSTALLPATH)/bin
+export CC       = gcc
+export INSTALLPATH = $(shell pwd)
+export GDAL_INCLUDE_PATH = /usr/local/Cellar/gdal/3.9.2_2/include
+export BINDIR   = ./bin
 
+# Delegating targets to src Makefile
 all clean check install uninstall molasses:
-	$(MAKE) -C src $@
+	$(MAKE) -C src $@ 
 
