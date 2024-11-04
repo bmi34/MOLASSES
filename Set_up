@@ -1,0 +1,14 @@
+Set up
+Run in breaks of code
+
+
+
+cd MOLASSES
+git clone git://github.com/ivmai/libatomic_ops.git
+git clone git://github.com/ivmai/bdwgc.git
+ln -s  ./external_libraries/libatomic_ops ./external_libraries/bdwgc/libatomic_ops
+cd bdwgc
+autoreconf -vif
+automake --add-missing
+./configure
+make
