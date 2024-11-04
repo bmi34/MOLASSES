@@ -1,0 +1,6 @@
+[submodule "external_libraries/bdwgc"]
+	path = external_libraries/bdwgc
+	url = https://github.com/ivmai/bdwgc.git
+[submodule "external_libraries/libatomic_ops"]
+	path = external_libraries/libatomic_ops
+	url = https://github.com/ivmai/libatomic_ops.git

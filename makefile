@@ -21,7 +21,6 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###########################################################################    
-
 #Makefile for compiling MOLASSES Modular Lava Simulator
 # MODULES: Alter as needed.
 export driver      = LJC2
@@ -47,4 +46,6 @@ export BINDIR   = ./bin
 # Delegating targets to src Makefile
 all clean check install uninstall molasses:
 	$(MAKE) -C src $@ 
+
+
 
