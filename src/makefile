@@ -23,16 +23,16 @@
 ###########################################################################
 
 # Compiler flags
-CFLAGS = -Wall -O2 -pthread
+CFLAGS = -Wall -O2 -pthread 
 
 # Include directories
-INCLUDES = -I$(GDAL_INCLUDE_PATH) -I../include -I./include -I../external_libraries/rnglib -I../external_libraries/ranlib
+INCLUDES = -I/usr/include/gdal -I../include -I./include -I../external_libraries/rnglib -I../external_libraries/ranlib -I../external_libraries/bdwgc/include
 
 # Library paths
 ifndef GDAL_LIB_PATH
-    LIBS = -lgdal -lgc -L../lib -lpthread -lranlib -lm
+    LIBS = -lgdal -L/workspaces/MOLASSES/external_libraries/bdwgc/.libs -lgc -L../lib -lpthread -lranlib -lm
 else
-    LIBS = -L$(GDAL_LIB_PATH) -lpthread -lgc -lgdal -L../lib -lranlib -lrnglib -lm
+    LIBS = -L$(GDAL_LIB_PATH) -lpthread -L/workspaces/MOLASSES/external_libraries/bdwgc/.libs -lgc -lgdal -L/workspaces/MOLASSES/lib -lranlib -lrnglib -lm
 endif
 
 SRCS = driver_LJC2.c \

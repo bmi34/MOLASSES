@@ -40,7 +40,7 @@ export params      = 2
 # Alter as needed for your system.
 export CC       = gcc
 export INSTALLPATH = $(shell pwd)
-export GDAL_INCLUDE_PATH = /usr/local/Cellar/gdal/3.9.2_2/include
+export GDAL_INCLUDE_PATH = /usr/include/gdal
 export BINDIR   = ./bin
 
 # Delegating targets to src Makefile
